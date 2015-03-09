@@ -26,10 +26,15 @@
                     </execution>
                </executions>
            </plugin>
-		    <plugin>
+		  <plugin>
             <groupId>com.lazerycode.jmeter</groupId>
              <artifactId>jmeter-analysis-maven-plugin</artifactId>
 			 <version>1.0.4</version>
+			      <configuration>
+                    <source>${project.build.directory}/jmeter/results/*.jtl</source>
+                    <targetDirectory>${project.build.directory}/jmeter/reports</targetDirectory>
+                    <processAllFilesFound>true</processAllFilesFound>
+                </configuration>
          <executions>
            <execution>
             <goals>
@@ -37,7 +42,7 @@
            </goals>
 		  </execution>
          </executions>
-		 </plugin>
-        </plugins>
+		</plugin>
+      </plugins>
     </build>
 </project>
