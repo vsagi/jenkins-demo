@@ -32,9 +32,8 @@
 			 <version>1.0.4</version>
 			      <configuration>
                     <source>${project.build.directory}/jmeter/results/*.jtl</source>
-                    <targetDirectory>${project.build.directory}/jmeter/reports</targetDirectory>
-                    <processAllFilesFound>true</processAllFilesFound>
-                </configuration>
+                    <targetDirectory>${project.build.directory}/reports</targetDirectory>
+                  </configuration>
          <executions>
            <execution>
             <goals>
